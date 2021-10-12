@@ -18,6 +18,17 @@
         android:textSize="40sp" />
 
 
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:layout_above="@+id/homeSearchButton"
+        android:inputType="textPersonName"
+        android:hint="Enter Person's name to search"
+        android:text="Name" />
+
     <Button
         android:id="@+id/homeSearchButton"
         android:layout_width="wrap_content"
@@ -27,4 +38,6 @@
         android:color="@color/indigo_dark"
         android:text="Search"
         app:cornerRadius="300dp" />
+
+
 </RelativeLayout>
