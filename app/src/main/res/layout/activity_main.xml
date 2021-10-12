@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:drawable/ic_search_category_default"
+    android:backgroundTint="@color/black">
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/aldrich"
-        android:textSize="40sp"
-        android:layout_centerHorizontal="true"
-        android:text="Find Me" />
-
+        android:text="Find Me"
+        android:textSize="40sp" />
 
 
     <Button
@@ -21,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:background="#009688"
         android:color="@color/indigo_dark"
         android:text="Search" />
 </RelativeLayout>
