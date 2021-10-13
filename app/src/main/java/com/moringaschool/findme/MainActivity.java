@@ -27,10 +27,8 @@ public class MainActivity extends AppCompatActivity {
         mHomeSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-//                Toast.makeText(MainActivity.this, "Search occurring kindly be patient", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 String name = mEditTextName.getText().toString();
-//                Log.d(TAG, name);
                 intent.putExtra("name", name);
                 startActivity(intent);
             }
