@@ -29,7 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
-
+//create adapter to display listview from backend
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, details);
         mprofileListView.setAdapter(adapter);
 
