@@ -27,7 +27,8 @@
         android:layout_above="@+id/homeSearchButton"
         android:inputType="textPersonName"
         android:hint="Enter Person's name to search"
-        android:text="Name" />
+        android:textColor="@color/blue_grey"
+        android:background="@color/white" />
 
     <Button
         android:id="@+id/homeSearchButton"

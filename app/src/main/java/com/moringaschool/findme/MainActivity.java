@@ -10,25 +10,28 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
-    private Button mHomeSearchButton;
-    private EditText mEditTextName;
+    @BindView(R.id.editTextTextPersonName) EditText mEditTextName;
+    @BindView(R.id.homeSearchButton) Button mHomeSearchButton;
+
     private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mEditTextName = (EditText) findViewById(R.id.editTextTextPersonName);
-        mHomeSearchButton= (Button)findViewById(R.id.homeSearchButton);
+        ButterKnife.bind(this);
         mHomeSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
 //                Toast.makeText(MainActivity.this, "Search occurring kindly be patient", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 String name = mEditTextName.getText().toString();
-                Log.d(TAG, name);
+//                Log.d(TAG, name);
+                intent.putExtra("name", name);
                 startActivity(intent);
             }
 
