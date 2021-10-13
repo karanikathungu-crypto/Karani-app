@@ -9,6 +9,7 @@ import android.widget.TextView;
 public class ProfileActivity extends AppCompatActivity {
 
     private TextView mprofileTextView;
+    private String [] details = new String [] {"Name", "Age", "DOB", "Gender", "Appearance", "LastSeen"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
