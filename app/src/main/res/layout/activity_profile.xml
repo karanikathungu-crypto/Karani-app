@@ -17,8 +17,18 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent"
         app:srcCompat="@drawable/anonymous" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Missing persons with matching name"
+        android:id="@+id/textViewPersonName"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
 
 
 </RelativeLayout>
