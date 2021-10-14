@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FindMe">
         <activity
+            android:name=".AccountActivity"
+            android:exported="true" />
+        <activity
             android:name=".ProfileActivity"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

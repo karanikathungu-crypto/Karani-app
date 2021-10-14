@@ -40,5 +40,29 @@
         android:text="Search"
         app:cornerRadius="300dp" />
 
+    <TextView
+        android:id="@+id/textViewAccountCreation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@id/homeSearchButton"
+        android:fontFamily="@font/aldrich"
+        android:textColor="@color/black"
+        android:text="You can create an account to receive updates on missing persons"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/createAccountHomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#009688"
+        android:color="@color/indigo_dark"
+        android:layout_below="@+id/textViewAccountCreation"
+        android:text="Create Account"
+        app:cornerRadius="300dp" />
+
+
 
 </RelativeLayout>
