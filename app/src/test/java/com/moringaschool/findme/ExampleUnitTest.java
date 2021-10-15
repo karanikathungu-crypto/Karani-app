@@ -1,6 +1,8 @@
 package com.moringaschool.findme;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 
 import static org.junit.Assert.*;
 
@@ -15,3 +17,5 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
     }
 }
+
+
