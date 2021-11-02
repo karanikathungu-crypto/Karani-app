@@ -2,6 +2,7 @@ package com.moringaschool.findme;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,7 +22,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SavedTweetsListActivity extends AppCompatActivity {
-    private DatabaseReference mRestaurantReference;
+    private DatabaseReference mTweetReference;
     private FirebaseRecyclerAdapter<Datum, FirebaseTweetViewHolder> mFirebaseAdapter;
 
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
@@ -35,7 +36,7 @@ public class SavedTweetsListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
 
-        mRestaurantReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_NAMES);
+        mTweetReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_NAMES);
         setUpFirebaseAdapter();
         hideProgressBar();
         showTweets();
@@ -44,7 +45,7 @@ public class SavedTweetsListActivity extends AppCompatActivity {
     private void setUpFirebaseAdapter(){
         FirebaseRecyclerOptions<Datum> options =
                 new FirebaseRecyclerOptions.Builder<Datum>()
-                        .setQuery(mRestaurantReference, Datum.class)
+                        .setQuery(mTweetReference, Datum.class)
                         .build();
 
         mFirebaseAdapter = new FirebaseRecyclerAdapter<Datum, FirebaseTweetViewHolder>(options) {
@@ -86,4 +87,16 @@ public class SavedTweetsListActivity extends AppCompatActivity {
     private void hideProgressBar() {
         mProgressBar.setVisibility(View.GONE);
     }
+
+    ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.START | ItemTouchHelper.END, 0) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+        }
+    };
 }
