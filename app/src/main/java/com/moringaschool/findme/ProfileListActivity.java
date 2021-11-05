@@ -290,7 +290,7 @@ public class ProfileListActivity extends AppCompatActivity {
     }
 
 
-    ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.START | ItemTouchHelper.END, 0) {
+    ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.START | ItemTouchHelper.END, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
         @Override
         public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
 
@@ -305,6 +305,16 @@ public class ProfileListActivity extends AppCompatActivity {
         @Override
         public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
 
+            int position = viewHolder.getAdapterPosition();
+            switch(direction){
+                case ItemTouchHelper.LEFT:
+                    tweets.remove(position);
+                    mAdapter.notifyItemRemoved(position);
+                    break;
+                case ItemTouchHelper.RIGHT:
+
+                    break;
+            }
         }
     };
 }

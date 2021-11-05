@@ -18,27 +18,41 @@
         android:textSize="40sp" />
 
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:layout_above="@+id/homeSearchButton"
-        android:inputType="textPersonName"
-        android:hint="Enter Person's name to search"
-        android:textColor="@color/blue_grey"
-        android:background="@color/white" />
+<!--    <EditText-->
+<!--        android:id="@+id/editTextTextPersonName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:ems="10"-->
+<!--        android:layout_above="@+id/homeSearchButton"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="Enter Person's name to search"-->
+<!--        android:textColor="@color/blue_grey"-->
+<!--        android:background="@color/white" />-->
 
     <Button
         android:id="@+id/homeSearchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
         android:background="#009688"
         android:color="@color/indigo_dark"
-        android:text="Search"
+        android:text="Search Recent"
+        android:layout_above="@+id/savedTweetsButton"
         app:cornerRadius="300dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Saved Tweets"
+        android:id="@+id/savedTweetsButton"
+        android:background="#009688"
+        android:color="@color/indigo_dark"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
     <TextView
         android:id="@+id/textViewAccountCreation"
@@ -52,16 +66,16 @@
         android:text="You can create an account to receive updates on missing persons"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/createAccountHomeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="#009688"
-        android:color="@color/indigo_dark"
-        android:layout_below="@+id/textViewAccountCreation"
-        android:text="Create Account"
-        app:cornerRadius="300dp" />
+<!--    <Button-->
+<!--        android:id="@+id/createAccountHomeButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:background="#009688"-->
+<!--        android:color="@color/indigo_dark"-->
+<!--        android:layout_below="@+id/textViewAccountCreation"-->
+<!--        android:text="Create Account"-->
+<!--        app:cornerRadius="300dp" />-->
 
 
 

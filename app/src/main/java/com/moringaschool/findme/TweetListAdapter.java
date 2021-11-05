@@ -48,8 +48,9 @@ public class TweetListAdapter extends RecyclerView.Adapter<TweetListAdapter.Twee
     }
 
     public class TweetViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener  {
-        @BindView(R.id.tweetImageView) ImageView mTweetImageView;
+//        @BindView(R.id.tweetImageView) ImageView mTweetImageView;
         @BindView(R.id.tweetTextView) TextView mTweetTextView;
+
 
 
         private Context mContext;
@@ -70,12 +71,12 @@ public class TweetListAdapter extends RecyclerView.Adapter<TweetListAdapter.Twee
             int itemPosition = getLayoutPosition();
             Intent intent = new Intent(mContext, TwitterDetailActivity.class);
             intent.putExtra("position", itemPosition);
-            intent.putExtra("restaurants", Parcels.wrap(mTweets));
+            intent.putExtra("tweets", Parcels.wrap(mTweets));
             mContext.startActivity(intent);
         }
 
-        public void bindTweetImage(Medium imageTweets){
-            Picasso.get().load(imageTweets.getType()).into(mTweetImageView);
-        }
+//        public void bindTweetImage(Medium imageTweets){
+//            Picasso.get().load(imageTweets.getType()).into(mTweetImageView);
+//        }
     }
 }

@@ -40,6 +40,8 @@ public class SavedTweetsListActivity extends AppCompatActivity {
         setUpFirebaseAdapter();
         hideProgressBar();
         showTweets();
+
+
     }
 
     private void setUpFirebaseAdapter(){
@@ -88,15 +90,4 @@ public class SavedTweetsListActivity extends AppCompatActivity {
         mProgressBar.setVisibility(View.GONE);
     }
 
-    ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.START | ItemTouchHelper.END, 0) {
-        @Override
-        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
-            return false;
-        }
-
-        @Override
-        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-
-        }
-    };
 }
